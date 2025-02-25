@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>City Game</title>
+
+ </head>
+<body>
+
+    <header>City Game by Jacen Piatt</header>
+
+<h2>Guess the city</h2>
+
+<form>
+    <label for="secret_city"> Where in the world </label>
+    <input type ="password" id="secret_city" name="secret_city" value="San Diego"> <br>
+
+    <label for="guess_city"> Guess the city </label>
+    <input type ="text" id="guess_city" name="guess_city"> <br>
+
+    <input type="button" onclick="checkCity()" value="Check guess">
+</form>
+
+
+<p id="result">Oops: 0 | Found: 0</p>
+
+<script> 
+let oops = 0;
+let found = 0;
+
+function checkCity(){
+    let secret = document.getElementById("secret_city").value;
+    let guess = document.getElementById("guess_city").value;
+
+    if (guess == secret) {
+        found++;
+        alert("Gotcha");
+    } else {
+        oops++;
+        alert("Awe");
+    }
+
+    document.getElementById("result").innerHTML = "Oops: " + oops + " | Found: " + found;
+}
+</script>
+
+</body>
+</html> 
