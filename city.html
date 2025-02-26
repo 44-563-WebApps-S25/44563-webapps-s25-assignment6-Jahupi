@@ -23,6 +23,33 @@
 
 <p id="result">Oops: 0 | Found: 0</p>
 
+<div id = container>
+    <img id="image" src="ant.png" width="150px" height="150px" onclick="updatePic()">
+</div>
+
+<script>
+    let usePic = 1;
+
+    function updatePic(){
+        const img = document.getElementById("image");
+
+        switch(usePic){
+            case 1:
+                img.src = "iguana.jpg"
+                usePic = 2
+                break;
+            case 2:
+                img.src = "possum.jpg"
+                usePic = 3
+                break;
+            case 3: 
+                img.src = "ant.png" 
+                usePic = 1
+                break;
+        }
+    }
+</script>
+
 <script> 
 let oops = 0;
 let found = 0;
