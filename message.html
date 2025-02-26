@@ -50,5 +50,43 @@ function amounts(){
 }
 </script>
 
+<form>
+    <input type="radio" id="product" name="operation" value="times" onclick="chooseOp()">
+    <label for="product">Product</label></br>
+  
+    <input type="radio" id="sum" name="operation" value="add" onclick="chooseOp()">
+    <label for="sum">Sum</label></br>
+  
+    <input type="radio" id="mod" name="operation" value="mod" onclick="chooseOp()">
+    <label for="mod">Mod</label></br>
+
+  </form>
+
+    <p id="result2">This text will be replaced</p>
+
+    <script>
+        function chooseOp(){
+            let price = parseFloat(document.getElementById("baseprice").value)
+            let breakAt = parseInt(document.getElementById("breakAt").value)
+            
+            const selected = document.querySelector('input[name="operation"]:checked').value;
+
+            if (selected == "add"){
+                result = price + breakAt
+                operationText = `${price} + ${breakAt} = ${result}`;
+            }else if (selected == "times"){
+                result = price * breakAt
+                operationText = `${price} * ${breakAt} = ${result}`;
+            }else if (selected == "mod"){
+                result = price % breakAt
+                operationText = `${price} % ${breakAt} = ${result}`;
+            }
+
+            document.getElementById("result2").innerHTML = operationText;
+
+        }
+    </script>
+
+
 </body>
 </html> 
