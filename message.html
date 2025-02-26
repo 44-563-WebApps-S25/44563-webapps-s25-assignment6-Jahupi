@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Message Cost Finder</title>
+ </head>
+<body>
+    <header>Jacen Piatt Message Cost</header>
+
+<h2>Getting input</h2>
+
+<form>
+    <label for="baseprice">Enter cost per letter</label>
+    <input type ="number" id="baseprice" name="baseprice" value=0.50> <br>
+
+    <label for="breakAt">Enter length needed for discount</label>
+    <input type ="number" id="breakAt" name="breakAt" value="9"> <br>
+
+    <label for="discount">Enter the discount percent</label>
+    <input type ="number" id="discount" name="discount" value="10"> <br>
+
+    <input type="button" onclick="amounts()" value="Show total">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+
+function amounts(){
+    let price = document.getElementById("baseprice").value
+    let breakAt = parseInt(document.getElementById("breakAt").value)
+    let discount = parseFloat(document.getElementById("discount").value) / 100
+    let myResults = ""
+
+    for (let size = breakAt - 3; size <= breakAt + 3; size++){
+        let totalCost = 0;
+
+        if (size < breakAt) {
+            totalCost = size * price;
+        } else {
+            let fullPriceLetters = breakAt - 1;
+            let discountedLetters = size - fullPriceLetters
+
+            totalCost = (fullPriceLetters * price) + (discountedLetters * (price - (price * discount)))
+        }
+            
+        myResults += `${size} costs ${totalCost.toFixed(2)};`;
+    }
+    document.getElementById("result").innerHTML= "Totals are: " + myResults
+}
+</script>
+
+</body>
+</html> 
