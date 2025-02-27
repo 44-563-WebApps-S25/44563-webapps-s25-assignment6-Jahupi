@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Dinner Plans</title>
+ </head>
+<body>
+    <header>Jacen Piatt plans dinner</header>
+
+<h2>Getting input</h2>
+
+<form>
+    <label for="form1">Serve wine</label>
+    <input type ="checkbox" id="form1" name="form1" value="true"> <br>
+
+    <label for="form2">Eat outside</label>
+    <input type ="checkbox" id="form2" name="form2" value="true"> <br>
+
+    <label for="form3">Light candles</label>
+    <input type="checkbox" id="form3" name="form3" value="false"> <br>
+
+    <input type="button" onclick="choices()" value="Dinner Choices">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+
+function choices(){
+    let my_dinner = {}
+
+    my_dinner.wine = document.getElementById("form1").checked;
+    my_dinner.outside = document.getElementById("form2").checked;
+    my_dinner.candles = document.getElementById("form3").checked;
+
+    document.getElementById("result").innerHTML = JSON.stringify(my_dinner, null, 2);
+
+}
+</script>
+
+</body>
+</html> 
