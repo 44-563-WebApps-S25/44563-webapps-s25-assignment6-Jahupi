@@ -2,6 +2,6 @@
 # WebApps-S25-Assignment-6
 Introduction to Java Script and DOM
 
-Hosted at: [Assignment 6 City](https://44-563-webapps-s25.github.io/44563-webapps-s25-assignment6-Jahupi/city.html)
-Hosted at: [Assignment 6 Discount/Message](https://44-563-webapps-s25.github.io/44563-webapps-s25-assignment6-Jahupi/message.html)
+Hosted at: [Assignment 6 City](https://44-563-webapps-s25.github.io/44563-webapps-s25-assignment6-Jahupi/city.html) <br>
+Hosted at: [Assignment 6 Discount/Message](https://44-563-webapps-s25.github.io/44563-webapps-s25-assignment6-Jahupi/message.html) <br>
 Hosted at: [Assignment 6 Dinner](https://44-563-webapps-s25.github.io/44563-webapps-s25-assignment6-Jahupi/dinner.html)
